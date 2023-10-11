@@ -18,7 +18,7 @@ type Server struct {
 }
 
 func ConnectToDatabase() (*gorm.DB, error) {
-	dsn := "root:sujith10@tcp(localhost:3306)/test1?charset=utf8&parseTime=True&loc=Local"
+	dsn := "username:password@tcp(localhost:port)/bdname?charset=utf8&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		panic("Failed to connect to the database: " + err.Error())
