@@ -12,3 +12,13 @@ It sets up a basic HTTP server with Chi routing to deal with HTTP queries. On po
 The WriteAlert function receives incoming POST requests, parses the JSON data, and puts it in the database.
 
 The ReadAlerts function responds to incoming GET requests by retrieving alerts data from the database using service and time range criteria and returning it as JSON.
+
+## Pre-requsities:
+* Install mysql.
+* For Database string use credentials while creating the database.
+* username:password@tcp(localhost:port)/dbname?charset=utf8&parseTime=True&loc=Local
+* Here, username: database account username, password: password of the database set while installing db, dbname: name of the db.
+
+## How to run the application
+* go mod tidy
+* go run main.go
